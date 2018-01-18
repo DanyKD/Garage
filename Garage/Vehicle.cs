@@ -7,25 +7,44 @@ using System.Threading.Tasks;
 namespace Garage
 {
     class Vehicle
-    {        
+    {
+            private string _vehicle;
             private string _registration;
             private string _color;
             private int _numberOfWheels;
             private double _weight;
-            private string _model;
-            public Vehicle(string registration, string color, int numberOfWheels, double weight, string model)
+        
+        public Vehicle(string vehicle)
+        {
+            _vehicle = vehicle;
+        }
+
+        public Vehicle(string vehicle,string registration, string color, int numberOfWheels, double weight)
             {
                 _registration = registration;
                 _color = color;
                 _numberOfWheels = numberOfWheels;
                 _weight = weight;
-                _model = model;           
+                _vehicle = vehicle;
             }
+        public string VehicleN
+        {
+            get
+            {
+                return _vehicle;
+            }
+
+            set
+            {
+                _vehicle = value;
+            }
+
+        }
         public string Registration
         {
             get
             {
-                return Registration;
+                return _registration;
             }
             set
             {
@@ -36,7 +55,7 @@ namespace Garage
         {
             get
             {
-                return Color;
+                return _color;
             }
             set
             {
@@ -47,7 +66,7 @@ namespace Garage
         {
             get
             {
-                return NumberOfWheels;
+                return _numberOfWheels;
             }
             set
             {
@@ -58,23 +77,13 @@ namespace Garage
         {
             get
             {
-                return Weight;
+                return _weight;
             }
             set
             {
                 Weight = _weight;
             }
         }
-        public string Model
-        {
-            get
-            {
-                return Model;
-            }
-            set
-            {
-                Model = _model;
-            }
-        }
+        
     }
 }

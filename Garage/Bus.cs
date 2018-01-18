@@ -1,0 +1,51 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Garage
+{
+    class Bus:Vehicle
+    {
+        private string _vehicle;
+        private int _numberOfEngines;
+
+        public Bus(string bus, int numberofengines, string registration, string color, int numberOfWheels, double weight)
+            : base(bus, registration, color, numberOfWheels, weight)
+        {
+            _vehicle = bus;
+            _numberOfEngines = numberofengines;
+        }
+
+        public Bus(string bus)
+            : base(bus)
+        {
+            _vehicle = bus;
+        }
+        public int NumberOfEngines
+        {
+            get
+            {
+                return _numberOfEngines;
+            }
+            set
+            {
+                _numberOfEngines = value;
+            }
+        }
+
+        public string Vehicle
+        {
+            get
+            {
+                return _vehicle;
+            }
+            set
+            {
+                _vehicle = value;
+            }
+        }
+
+    }
+}
