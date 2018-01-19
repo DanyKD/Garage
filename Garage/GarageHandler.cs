@@ -94,10 +94,10 @@ namespace Garage
             {
                 for (int i = 0; i < garage.Capacity; i++)
                 {
-                    Console.WriteLine($" {i + 1}.                                                                                                     |");
+                    Console.WriteLine($" {i + 1}.                                                                                                |");
 
                 }
-                Console.WriteLine(" ---------------------------------------------------------------------------------------------------");
+                
             }
         }
         public void MainMenu()
@@ -663,6 +663,7 @@ namespace Garage
 
             Console.Write("\n Color: ");
             color = IfLetters();
+            color = color.ToLower();
             Console.Write("\n Number of wheels: ");
             numberOfWheels = IfNum();
             Console.Write("\n Weight: ");
@@ -673,6 +674,7 @@ namespace Garage
                 Console.Write("\n Registration number: ");
                 Reg_Number = Convert.ToString(Console.ReadLine());
 
+                Reg_Number = Reg_Number.ToUpper();
                 for (int i = 0; i < garage.Count(); i++)
                 {
                     if (garage[i].Registration == Reg_Number)
